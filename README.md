@@ -2,8 +2,8 @@
 Building my own text editor following [antirez's guide](https://viewsourcecode.org/snaptoken/kilo/).
 
 # References
-[unistd.h Man page](https://pubs.opengroup.org/onlinepubs/7908799/xsh/unistd.h.html)
-[termios Man page](https://linux.die.net/man/3/termios)
+1. [unistd.h Man page](https://pubs.opengroup.org/onlinepubs/7908799/xsh/unistd.h.html)
+2. [termios Man page](https://linux.die.net/man/3/termios)
 
 # Progress
 - [x] Setup
@@ -13,7 +13,6 @@ Building my own text editor following [antirez's guide](https://viewsourcecode.o
 - [ ] A text editor
 - [ ] Search
 - [ ] Syntax highlighting
-
 
 # Notes
 `int tcgetattr(int fd, struct termios *termios_p);`
@@ -26,10 +25,10 @@ Building my own text editor following [antirez's guide](https://viewsourcecode.o
 #### `errno`
 A global variable in C that stores an error code when a system call or library function fails.
 
-#### Standard File Descriptors
-- Macro Value Description STDIN_FILENO ==0==
-- Standard input STDOUT_FILENO 1
-- Standard output STDERR_FILENO 2 Standard error
+#### Standard File Descriptors (Macro Value Description)
+- STDIN_FILENO (0) &rarr; Standard input
+- STDOUT_FILENO (1)  &rarr; Standard output
+- STDERR (2) &rarr; Standard error
 
 #### `perror`
 Prints an error message describing the last errno value.
