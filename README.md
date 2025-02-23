@@ -16,32 +16,22 @@ Building my own text editor following [antirez's guide](https://viewsourcecode.o
 
 
 # Notes
-** will format them later **
-int tcgetattr(int fd, struct termios *termios_p);
+`int tcgetattr(int fd, struct termios *termios_p);`
+- Retrieves the terminal configuration and stores it in a struct termios.
+- fd → File descriptor of the terminal (usually STDIN_FILENO, which is 0). • termios_p → Pointer to a struct termios that stores the settings.
+- Return Value:
+  - Success •
+  - -1 → Error (sets errno)
 
-Retrieves the terminal configuration and stores it in a struct termios.
-
-Parameters:
- • fd → File descriptor of the terminal (usually STDIN_FILENO, which is 0).
- • termios_p → Pointer to a struct termios that stores the settings.
-
-Return Value:
- • 0 → Success
- • -1 → Error (sets errno)
-
-errno
-
+#### `errno`
 A global variable in C that stores an error code when a system call or library function fails.
 
-Standard File Descriptors
+#### Standard File Descriptors
+- Macro Value Description STDIN_FILENO ==0==
+- Standard input STDOUT_FILENO 1
+- Standard output STDERR_FILENO 2 Standard error
 
-Macro Value Description
-STDIN_FILENO 0 Standard input
-STDOUT_FILENO 1 Standard output
-STDERR_FILENO 2 Standard error
-
-perror
-
+#### `perror`
 Prints an error message describing the last errno value.
-
-perror("Error message");
+`perror("Error message”);`
+“Error message” is the prefix here.
